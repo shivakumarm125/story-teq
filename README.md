@@ -13,7 +13,6 @@ This project implements a responsive web application designed to provide optimal
 
 ## Project Structure
 
-.
 ├── public
 │   ├── index.html
 │   └── ...
