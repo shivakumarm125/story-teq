@@ -10,8 +10,6 @@ This project implements a responsive web application designed to provide optimal
   - **Keyboard Navigation**: Users can navigate through cards using the Tab key, ensuring accessibility for users who prefer or require keyboard navigation.
 - **BEM Methodology**: Styles are implemented using the Block Element Modifier (BEM) naming convention, promoting clear and maintainable CSS.
 
-
-## Project Structure
 ├── public
 │   ├── index.html
 │   └── ...
