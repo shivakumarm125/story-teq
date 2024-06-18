@@ -1,3 +1,34 @@
 .VehicleList {
   width: 100%;
 }
+
+.vehicle-list {
+  display: grid;
+  grid-gap: 0px;
+  padding: 16px;
+}
+
+.vehicle-list__heading {
+  font-size: 2em;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .vehicle-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .vehicle-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .vehicle-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+

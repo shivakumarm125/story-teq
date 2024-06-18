@@ -1,0 +1,121 @@
+.vehicle-card {
+    border: 0.5px solid #ddd;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.vehicle-card:hover {
+    cursor: pointer;
+    .vehicle-card__image {
+        filter: brightness(0.7);
+    }
+
+}
+
+.vehicle-card__figure {
+    margin: 0;
+}
+
+.vehicle-card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: filter 1s;
+}
+
+.vehicle-card__header {
+    padding: 16px;
+}
+
+.vehicle-card__name {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+    display: inline-block;
+    position: relative;
+}
+
+.vehicle-card__readmorearrow{
+    font-size: 14px;
+}
+
+@media (min-width: 601px) {
+
+    .vehicle-card__name::before,
+    .vehicle-card__name::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #000000;
+    }
+
+    .vehicle-card__name::before {
+        top: 0%;
+        left: 0;
+    }
+
+    .vehicle-card__name::after {
+        bottom: 0%;
+        right: 0;
+    }
+}
+
+.vehicle-card__info {
+    padding: 16px;
+}
+
+.vehicle-card__price {
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.vehicle-card__description {
+    color: #888;
+    min-height: 50px;
+}
+
+@media (max-width: 600px) {
+    .vehicle-card {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 2fr;
+        text-align: left;
+    }
+
+    .vehicle-card__figure {
+        grid-row: 1 / 3;
+        grid-column: 1;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .vehicle-card__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .vehicle-card__info {
+        grid-row: 1;
+        grid-column: 2;
+        padding: 16px 16px 0px 16px;
+    }
+
+    .vehicle-card__header {
+        grid-row: 1;
+        grid-column: 2;
+        padding: 16px 16px;
+    }
+
+    .vehicle-card__price {
+        padding-top: 16px;   
+    }
+
+    .vehicle-card__name {
+        font-size: 1.3em;
+    } 
+}
